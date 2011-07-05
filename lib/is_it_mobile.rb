@@ -12,7 +12,7 @@ class IsItMobile
     :symbian        => 'symbian',
     :wii            => 'wii',
     :playstation    => 'playstation',
-    :other          => 'up.browser|up.link|mmp|smartphone|midp|wap|vodafone|o2|pocket|kindle|mobile|pda\b|psp|treo'
+    :other          => 'up.browser|up.link|mmp|smartphone|midp|wap|vodafone|o2|pocket|kindle|pda\b|psp|treo'
   }
   POPULAR_MOBILE_USER_AGENT_REGEX = %r{(#{MOBILE_USER_AGENTS.collect{|category,regex| regex}.join(')|(')})}i
   POPULAR_DEVICES = MOBILE_USER_AGENTS.keys.reject{ |key| key == :other }
