@@ -43,7 +43,7 @@ module IsItMobile::ForRails
   
     # Sets the request format to @@mobile_format when the request is from a mobile device
     def change_request_format_to_mobile
-      request.format = self.class.mobile_format if request.format == :html
+      request.format = self.class.mobile_format if request.format == :html && !session[:full_site]
     end
     
     # Some helpers for popular devices - these don't (yet) wrangle the request format
